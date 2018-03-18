@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/czanfir/czanfir_copyright_view_tool
-  revision: 6eb04a392597e72f06ff9ca41c4297468aa2fa19
-  specs:
-    czanfir_copyright_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -65,6 +59,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    czanfir_copyright_view_tool (0.1.0)
     devise (4.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -199,7 +194,7 @@ DEPENDENCIES
   bootstrap (~> 4.0.0)
   byebug
   coffee-rails (~> 4.2)
-  czanfir_copyright_view_tool!
+  czanfir_copyright_view_tool (~> 0.1.0)
   devise (~> 4.4, >= 4.4.1)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
