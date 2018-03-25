@@ -11,7 +11,11 @@ class PagesController < ApplicationController
   end
   
   def tech_news
-    @tweets = SocialTool.twitter_search
+    @tweets = Hash.new
+    @tweets[:java] = SocialTool.twitter_search "#java"
+    @tweets[:rails] = SocialTool.twitter_search "#rubyonrails"
+    @tweets[:coding] = SocialTool.twitter_search "#coding"
+    @tweets
   end
 
 end

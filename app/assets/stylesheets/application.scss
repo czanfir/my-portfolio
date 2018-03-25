@@ -214,9 +214,14 @@ body {
 }
 
 .tech-news > .card {
-  padding: 30px;
+  padding: 10px;
 }
 
 .tech-news a {
   color: green;
+}
+
+.full-width {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
 }

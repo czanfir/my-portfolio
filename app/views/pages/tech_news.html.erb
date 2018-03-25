@@ -1,15 +1,7 @@
-<div class="inner cover">
-  <h1 class="cover-heading">Rails News</h1>
-  
+<div class="inner cover full-width">
   <div class="row">
-    <% @tweets.each do |tweet| %>
-      <div class="col-md-6">
-        <div class="tech-news">
-          <div class="card">
-            <%= twitter_parser tweet %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <%= render 'tweets_section', tweets: @tweets[:rails], title: 'Rails News' %>
+    <%= render 'tweets_section', tweets: @tweets[:java], title: 'Java News' %>
+    <%= render 'tweets_section', tweets: @tweets[:coding], title: 'Coding News' %>
   </div>
 </div>
