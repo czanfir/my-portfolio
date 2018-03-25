@@ -207,3 +207,21 @@ body {
 .app-footer {
   color: white;
 }
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news > .card {
+  padding: 10px;
+}
+
+.tech-news a {
+  color: green;
+}
+
+.full-width {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
