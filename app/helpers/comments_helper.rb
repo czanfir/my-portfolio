@@ -1,3 +1,3 @@
 module CommentsHelper
-  include BlogsHelper
+  include ContentHelper
 end
