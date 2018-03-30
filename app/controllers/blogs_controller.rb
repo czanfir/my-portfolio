@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  before_action :set_topics, only: [:index]
+  before_action :set_topics
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
   
@@ -90,7 +90,11 @@ class BlogsController < ApplicationController
     end    
     
     def set_topics
-      @topics = Topic.all
+      if logged_in?(:site_admin)
+        @topics = Topic.all
+      else
+        @topics = Topic.with_blogs
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
