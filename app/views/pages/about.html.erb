@@ -9,6 +9,75 @@
 
       <div class="col-md-8">
         <%= render 'shared/about_me_body'%>
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+          
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#achievements"
+            aria-expanded="false"
+            aria-controler="achievements"
+          >
+            Achievements
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-body">
+              Job 1
+            </div>
+            <div class="card card-body">
+              Job 2
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-body">
+              School 1
+            </div>
+            <div class="card card-body">
+              School 2
+            </div>
+            <div class="card card-body">
+              School 3
+            </div>
+          </div>
+          
+           <div class="collapse" id="achievements">
+            <div class="card card-body">
+              Achievement 1
+            </div>
+            <div class="card card-body">
+              Achievement 2
+            </div>
+            <div class="card card-body">
+              Achievement
+            </div>
+          </div>
+        </p>
       </div>
     </div>
   </div>
