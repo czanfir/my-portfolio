@@ -1,13 +1,103 @@
-<h1>About Me</h1>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "about_me.png", width: "100%", alt: "profile image" %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-<hr>
+      <div class="col-md-8">
+        <%= render 'shared/about_me_body'%>
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+            id="buttonJobHistory"
+          >
+            Job History
+          </button>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag "about_me.png", width: 300, alt: "profile image" %>
-  </div>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+            id="buttonEducation"
+          >
+            Education
+          </button>
+          
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#achievements"
+            aria-expanded="false"
+            aria-controler="achievements"
+            id="buttonAchievements"
+          >
+            Achievements
+          </button>
+        </p>
 
-  <div class="col-md-8">
-    <%= render 'shared/about_me_body'%>
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-body">
+              Job 1
+            </div>
+            <div class="card card-body">
+              Job 2
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-body">
+              School 1
+            </div>
+            <div class="card card-body">
+              School 2
+            </div>
+            <div class="card card-body">
+              School 3
+            </div>
+          </div>
+          
+           <div class="collapse" id="achievements">
+            <div class="card card-body">
+              Achievement 1
+            </div>
+            <div class="card card-body">
+              Achievement 2
+            </div>
+            <div class="card card-body">
+              Achievement
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
   </div>
 </div>

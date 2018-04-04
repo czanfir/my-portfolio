@@ -8,6 +8,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <%= favicon_link_tag 'favicons/initials.ico' %>
+    
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,6 +25,5 @@
     </main>
     <%= render 'shared/portfolio_footer' %>
     <%= alerts %>
-    <%= source_helper("portfolio") %>
   </body>
 </html>
